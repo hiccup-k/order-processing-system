@@ -1,0 +1,43 @@
+# Maven
+target/
+*.class
+ .env
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Spring Boot / Environment files
+.env
+*.env
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets / credentials
+application-local.properties
+application-local.yml
+application-local.yaml
+*secret*
+*credentials*
+
+# Build artifacts
+*.jar
+*.war
+
+# Temporary files
+*.tmp
+*.temp

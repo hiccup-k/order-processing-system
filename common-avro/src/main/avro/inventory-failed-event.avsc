@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "InventoryFailedEvent",
+  "namespace": "com.example.events",
+  "doc": "Published by inventory-service when one or more items could not be reserved (insufficient stock).",
+  "fields": [
+    {"name": "eventId", "type": "string"},
+    {"name": "orderId", "type": "long"},
+    {"name": "reason", "type": "string"},
+    {"name": "failedAt", "type": {"type": "long", "logicalType": "timestamp-millis"}}
+  ]
+}

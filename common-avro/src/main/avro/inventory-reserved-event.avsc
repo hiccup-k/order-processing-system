@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "InventoryReservedEvent",
+  "namespace": "com.example.events",
+  "doc": "Published by inventory-service when all items in an order were successfully reserved.",
+  "fields": [
+    {"name": "eventId", "type": "string"},
+    {"name": "orderId", "type": "long"},
+    {"name": "reservationId", "type": "string"},
+    {"name": "reservedAt", "type": {"type": "long", "logicalType": "timestamp-millis"}}
+  ]
+}

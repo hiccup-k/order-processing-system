@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "OrderCreatedEvent",
+  "namespace": "com.example.events",
+  "doc": "Published by order-service after an order is persisted with status CREATED.",
+  "fields": [
+    {"name": "eventId", "type": "string", "doc": "Unique id for this event, used for idempotent consumption"},
+    {"name": "orderId", "type": "long"},
+    {"name": "customerId", "type": "string"},
+    {"name": "items", "type": {
+      "type": "array",
+      "items": {
+        "type": "record",
+        "name": "OrderItemAvro",
+        "fields": [
+          {"name": "sku", "type": "string"},
+          {"name": "quantity", "type": "int"}
+        ]
+      }
+    }},
+    {"name": "totalAmount", "type": "double"},
+    {"name": "createdAt", "type": {"type": "long", "logicalType": "timestamp-millis"}}
+  ]
+}
