@@ -46,7 +46,7 @@ A small, production-shaped system for placing an order, checking/reserving inven
 
 All four topics key events by `orderId`, so every event for a given order lands on the same partition in each topic and is processed in order relative to that order — without requiring a global ordering guarantee across unrelated orders.
 
-## Why these design choices (interview talking points)
+## Why these design choices
 
 * **Kafka + Avro + Schema Registry.** Every event is a generated Avro class (`common-avro` module), not a hand-maintained JSON DTO. Schema Registry validates event schemas and can enforce the configured compatibility policy, helping prevent incompatible schema changes between producers and consumers.
 
